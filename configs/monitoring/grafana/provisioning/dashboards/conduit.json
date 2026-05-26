@@ -211,10 +211,42 @@
                 "value": null
               }
             ]
-          },
-          "unit": "bytes"
+          }
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "A"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "decbytes"
+              },
+              {
+                "id": "displayName",
+                "value": "GB"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "B"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "bytes"
+              },
+              {
+                "id": "displayName",
+                "value": "GiB"
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
         "h": 4,
@@ -245,7 +277,19 @@
             "uid": "prometheus"
           },
           "expr": "sum(conduit_bytes_downloaded)",
+          "instant": true,
+          "legendFormat": "GB",
           "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "expr": "sum(conduit_bytes_downloaded)",
+          "instant": true,
+          "legendFormat": "GiB",
+          "refId": "B"
         }
       ],
       "title": "Total Download",
@@ -270,10 +314,42 @@
                 "value": null
               }
             ]
-          },
-          "unit": "bytes"
+          }
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "A"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "decbytes"
+              },
+              {
+                "id": "displayName",
+                "value": "GB"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "B"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "bytes"
+              },
+              {
+                "id": "displayName",
+                "value": "GiB"
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
         "h": 4,
@@ -304,7 +380,19 @@
             "uid": "prometheus"
           },
           "expr": "sum(conduit_bytes_uploaded)",
+          "instant": true,
+          "legendFormat": "GB",
           "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "expr": "sum(conduit_bytes_uploaded)",
+          "instant": true,
+          "legendFormat": "GiB",
+          "refId": "B"
         }
       ],
       "title": "Total Upload",
@@ -7135,10 +7223,42 @@
                 "value": null
               }
             ]
-          },
-          "unit": "bytes"
+          }
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "A"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "decbytes"
+              },
+              {
+                "id": "displayName",
+                "value": "GB"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "B"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "bytes"
+              },
+              {
+                "id": "displayName",
+                "value": "GiB"
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
         "h": 4,
@@ -7169,8 +7289,19 @@
             "uid": "prometheus"
           },
           "expr": "sum(conduit_bytes_downloaded_lifetime)",
-          "refId": "A",
-          "legendFormat": "Lifetime Download"
+          "instant": true,
+          "legendFormat": "GB",
+          "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "expr": "sum(conduit_bytes_downloaded_lifetime)",
+          "instant": true,
+          "legendFormat": "GiB",
+          "refId": "B"
         }
       ],
       "title": "Lifetime Download",
@@ -7197,10 +7328,42 @@
                 "value": null
               }
             ]
-          },
-          "unit": "bytes"
+          }
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "A"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "decbytes"
+              },
+              {
+                "id": "displayName",
+                "value": "GB"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "B"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "bytes"
+              },
+              {
+                "id": "displayName",
+                "value": "GiB"
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
         "h": 4,
@@ -7231,8 +7394,19 @@
             "uid": "prometheus"
           },
           "expr": "sum(conduit_bytes_uploaded_lifetime)",
-          "refId": "A",
-          "legendFormat": "Lifetime Upload"
+          "instant": true,
+          "legendFormat": "GB",
+          "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "expr": "sum(conduit_bytes_uploaded_lifetime)",
+          "instant": true,
+          "legendFormat": "GiB",
+          "refId": "B"
         }
       ],
       "title": "Lifetime Upload",
